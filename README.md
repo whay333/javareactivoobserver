@@ -2,4 +2,4 @@
 
 
 ## Ejercicio
-Haga su propia implementacion del patrón observer, con lo aprendido en la clase
+Ejercicio de comidas usando observer en java reactivo
