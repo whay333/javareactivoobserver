@@ -1,4 +1,3 @@
-import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -8,14 +7,14 @@ public class Main {
     public static void main(String[] args) {
 
 
-        SofkaU sofkau = new SofkaU();
+        Actividades activity = new Actividades();
 
-        executeGame(sofkau);
+        executeGame(activity);
 
 
     }
 
-    private static void executeGame(SofkaU sofkau) {
+    private static void executeGame(Actividades activity) {
         Scanner sc = new Scanner(System.in);
         Scanner sc2 = new Scanner(System.in);
 
@@ -31,29 +30,29 @@ public class Main {
                 System.out.println("Escriba el nombre de la persona que va a comer");
                 String nameToBeAdded = sc2.nextLine();
 
-                Sofkiano sofkiano = new Sofkiano(nameToBeAdded);
-                sofkau.addObserver(sofkiano);
+                Restaurante menu = new Restaurante(nameToBeAdded);
+                activity.addObserver(menu);
 
                 System.out.println("Persona Guardada correctamente.");
-                executeGame(sofkau);
+                executeGame(activity);
                 break;
 
             case 2:
-                sofkau.getObservers().forEach(System.out::println);
+                activity.getObservers().forEach(System.out::println);
 
                 System.out.println("Escriba el nombre de la persona que no va a comer");
                 String nameToBeRemoved = sc2.nextLine();
 
-                sofkau.removeByName(nameToBeRemoved);
+                activity.removeByName(nameToBeRemoved);
                 System.out.println("Persona Eliminada correctamente.");
-                executeGame(sofkau);
+                executeGame(activity);
                 break;
 
             case 3:
                 System.out.println("Escribir el menú del restaurante");
                 String link = sc2.nextLine();
-                sofkau.addPodcast(link);
-                executeGame(sofkau);
+                activity.addPodcast(link);
+                executeGame(activity);
                 break;
             case 8:
                 System.out.println("Gracias por utilizar nuestro sistema de comidas!");

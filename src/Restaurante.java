@@ -1,10 +1,8 @@
-import java.util.Objects;
-
-public class Sofkiano implements Observer{
+public class Restaurante implements Observer{
     private String name;
 
 
-    public Sofkiano(String name) {
+    public Restaurante(String name) {
         this.name = name;
     }
 

@@ -1,7 +1,5 @@
-import java.util.List;
-
 // sujeto concreto
-public class SofkaU extends Subject{
+public class Actividades extends Subject{
 
     private String podcast;
 
@@ -10,7 +8,7 @@ public class SofkaU extends Subject{
 
         this.podcast = link;
 
-        System.out.println("Nuevo menu de comidas aniadido");
+        System.out.println("Nuevo menu de comidas anidado");
 
         this.notifiy();
     }
@@ -26,7 +24,7 @@ public class SofkaU extends Subject{
 
     public void removeByName(String name){
         this.removeObserver(observers.stream()
-                .filter(observer -> observer instanceof  Sofkiano && ((Sofkiano) observer).getName().equals(name))
+                .filter(observer -> observer instanceof Restaurante && ((Restaurante) observer).getName().equals(name))
                 .findFirst()
                 .get());
     }
